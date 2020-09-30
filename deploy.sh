@@ -3,17 +3,13 @@
 # abort on errors
 set -e
 
+npm run build
 
 git checkout release
-git pull
-git merge master
-# build
-npm ci
-npm run build
 
 # navigate into the build output directory
 cd dist
-
+git init
 git add -A
 git commit -m 'deploy'
 
