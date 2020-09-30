@@ -6,10 +6,10 @@ set -e
 npm run build
 
 git checkout release
+git merge master
 
 # navigate into the build output directory
 cd dist
-git init
 git add -A
 git commit -m 'deploy'
 
