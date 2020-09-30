@@ -19,4 +19,6 @@ git commit -m 'deploy'
 
 git push
 
+git checkout master
+
 cd -
