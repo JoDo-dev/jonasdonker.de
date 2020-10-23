@@ -40,7 +40,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "max-len":"off",
+      "indent": ["error", 4]
+    }
   },
   "browserslist": [
     "> 1%",
