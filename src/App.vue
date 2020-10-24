@@ -9,6 +9,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #f8f8f8;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
