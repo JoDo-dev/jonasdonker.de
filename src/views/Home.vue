@@ -44,37 +44,37 @@ import quotes from '@/data/quotes';
 import Logo from '@/components/logo.vue';
 
 export default {
-  name: 'Home',
-  components: {
-    Logo,
-  },
-  data() {
-    return {
-      activeQuote: {},
-      turned: false,
-    };
-  },
-  computed: {
-    viewType() {
-      return window.innerWidth > 414 ? 'desktop' : 'mobile';
+    name: 'Home',
+    components: {
+        Logo,
     },
-  },
-  created() {
-    this.getActiveQuote();
-  },
-  methods: {
-    getActiveQuote() {
-      const rand = Math.floor((Math.random() * quotes.length - 1) + 1);
-      this.activeQuote = quotes[rand];
+    data() {
+        return {
+            activeQuote: {},
+            turned: false,
+        };
     },
-    setTurned(e) {
-      if (!this.turned) {
-        this.turned = true;
-      } else if (!e.target.classList.contains('block')) {
-        this.turned = false;
-      }
+    computed: {
+        viewType() {
+            return window.innerWidth > 414 ? 'desktop' : 'mobile';
+        },
     },
-  },
+    created() {
+        this.getActiveQuote();
+    },
+    methods: {
+        getActiveQuote() {
+            const rand = Math.floor((Math.random() * quotes.length - 1) + 1);
+            this.activeQuote = quotes[rand];
+        },
+        setTurned(e) {
+            if (!this.turned) {
+                this.turned = true;
+            } else if (!e.target.classList.contains('block')) {
+                this.turned = false;
+            }
+        },
+    },
 };
 </script>
 
